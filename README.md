@@ -1,6 +1,6 @@
 # 根据Vant Vue端数字键盘封装微信小程序版
 ## 使用方法
-```javascript
+```json
 "usingComponents": {
     "number-keyboard": "/Components/number-keyboard/index"
  }
