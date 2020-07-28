@@ -1,0 +1,77 @@
+.number-keyboard__body {
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 12rpx;
+}
+
+.number-keyboard__keys {
+  display: -webkit-flex;
+  display: flex;
+  flex: 3;
+  flex-wrap: wrap;
+}
+
+.key__wrapper {
+  flex: 1;
+  flex-basis: 33%;
+  box-sizing: border-box;
+  padding: 0 12rpx 12rpx 0;
+}
+
+.key {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100rpx;
+  font-size: 40rpx;
+  line-height: 1.5;
+  background-color: #fff;
+  border-radius: 16rpx;
+  cursor: pointer;
+}
+
+.key__wrapper--wider {
+  -webkit-flex-basis: 66%;
+  flex-basis: 66%;
+}
+
+.number-keyboard__sidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.key--large {
+  height: 100%;
+}
+
+.key--blue,
+.key--delete {
+  font-size: 30rpx;
+}
+
+.key--blue {
+  color: #fff;
+  background-color: #1989fa;
+}
+
+.key--large {
+  height: 100%;
+}
+
+.active {
+  background-color: #ebedf0;
+}

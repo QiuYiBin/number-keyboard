@@ -1,0 +1,32 @@
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="background-color: #f2f3f5" overlay="{{ false }}">
+	<slot></slot>
+	<view class="number-keyboard__body">
+		<view class="number-keyboard__keys">
+			<view class="key__wrapper" wx:for="{{ 11 }}" wx:key="index">
+				<view class="key" bindtap="onInput" data-index="{{ index }}" hover-class="active" hover-stay-time="100">{{ parse.getKeyBoard(index, action) }}</view>
+			</view>
+		</view>
+		<view class="number-keyboard__sidebar">
+			<view class="key__wrapper">
+				<view class="key key--large key--delete" bindtap="onDelete" hover-class="active" hover-stay-time="100">删除</view>
+			</view>
+			<view class="key__wrapper">
+				<view class="key key--blue key--large" bindtap="onClose" hover-class="active" hover-stay-time="100">完成</view>
+			</view>
+		</view>
+	</view>
+</van-popup>
+
+<wxs module="parse">
+	module.exports = {
+		getKeyBoard: function(index, action) {
+			var content = index + 1;
+			if (index == 9) {
+				content = 0;
+			} else if (index == 10) {
+				content = '.';
+			}
+			return content;
+		}
+	}
+</wxs>
